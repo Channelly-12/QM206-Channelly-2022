@@ -1,0 +1,43 @@
+!
+!   GAMESS Calculation input file
+!   
+!
+ $CONTRL SCFTYP=RHF MAXIT=200 RUNTYP=ENERGY
+         COORD=UNIQUE MULT=1 
+         ICHARG=0  
+         DFTTYP=B3LYP
+         MOLPLT=.FALSE. PLTORB=.FALSE.  $END
+ $SYSTEM TIMLIM=2879 MWORDS=250  $END
+
+ $STATPT OPTTOL=0.0005 NSTEP=999 $END
+ $STATPT IHREP=0  $END
+
+ $DFT    METHOD=GRID  NLEB=590  $END
+
+ $BASIS  GBASIS=N31 NGAUSS=6
+         NDFUNC=1   NPFUNC=0  $END
+
+ $SCF    DIRSCF=.T. $END
+ $GUESS  GUESS=HUCKEL  $END
+
+ $DATA
+   
+  C1
+C     6.0     1.22661    -0.75208     0.22750
+C     6.0     1.24550     0.75820    -0.07363
+C     6.0    -0.10079     1.42048    -0.02551
+C     6.0    -1.24422     0.71563    -0.01910
+C     6.0    -1.23467    -0.72284    -0.10590
+C     6.0    -0.09746    -1.42004    -0.01507
+H     1.0     1.49145    -0.91622     1.27529
+H     1.0     2.00166    -1.24580    -0.36290
+H     1.0     1.67230     0.92681    -1.06527
+H     1.0     1.91886     1.25454     0.63540
+H     1.0    -0.13676     2.50165    -0.01122
+H     1.0    -2.20284     1.21844     0.00657
+H     1.0    -2.18771    -1.22795    -0.24986
+H     1.0    -0.11576    -2.50358    -0.08848
+ $END
+
+
+! Customizations after this line are persisted when using Do More Calculations
